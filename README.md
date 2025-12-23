@@ -27,7 +27,7 @@ React kullanılarak geliştirilmiş, gerçek zamanlı döviz verileri bir API ü
 
 ## 📸 Screenshot
 
-![Döviz Kuru Uygulaması](screenshots/app.png)
+![Döviz Kuru Uygulaması](images/screenshots/app.png)
 
 🎯 Amaç
 
