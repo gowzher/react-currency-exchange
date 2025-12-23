@@ -1,16 +1,47 @@
-# React + Vite
+💱 Döviz Kuru Uygulaması
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Basit ve anlaşılır bir döviz kuru çevirme uygulaması.
+React kullanılarak geliştirilmiş, gerçek zamanlı döviz verileri bir API üzerinden alınmaktadır.
 
-Currently, two official plugins are available:
+🚀 Özellikler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Döviz kuru çevirme
 
-## React Compiler
+- Para birimi seçimi (USD, EUR, TL vb.)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Temiz ve sade arayüz
 
-## Expanding the ESLint configuration
+- Vanilla CSS ile stil verme (UI library kullanılmadı)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🛠️ Kullanılan Teknolojiler
+
+- React
+
+- JavaScript (ES6+)
+
+- CSS (Vanilla)
+
+🎯 Amaç
+
+- Bu proje, React öğrenme sürecimde:
+
+- API kullanımı
+
+- State yönetimi
+
+- Temel layout ve CSS becerilerini
+pekiştirmek amacıyla geliştirilmiştir.
+
+🌱 Geliştirme Fikirleri
+
+- Responsive tasarımın iyileştirilmesi
+
+- Dark / Light mode
+
+- Daha fazla para birimi
+
+- UI library (Tailwind, MUI vb.) ile arayüz geliştirme
+
+👤 Geliştirici
+
+Gowzher
