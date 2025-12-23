@@ -9,6 +9,8 @@ React kullanılarak geliştirilmiş, gerçek zamanlı döviz verileri bir API ü
 
 - Para birimi seçimi (USD, EUR, TL vb.)
 
+- Gerçek zamanlı API verisi
+
 - Temiz ve sade arayüz
 
 - Vanilla CSS ile stil verme (UI library kullanılmadı)
@@ -19,11 +21,17 @@ React kullanılarak geliştirilmiş, gerçek zamanlı döviz verileri bir API ü
 
 - JavaScript (ES6+)
 
+- Axios
+
 - CSS (Vanilla)
+
+## 📸 Screenshot
+
+![Döviz Kuru Uygulaması](screenshots/app.png)
 
 🎯 Amaç
 
-- Bu proje, React öğrenme sürecimde:
+Bu proje, React öğrenme sürecimde:
 
 - API kullanımı
 
