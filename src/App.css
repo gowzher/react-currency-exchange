@@ -1,9 +1,18 @@
 body {
     margin: 0;
     padding: 0;
-    height: 97vh;
-    background-image: url(images/finance.png);
+    min-height: 100vh;
+    /* Görselin üzerine hafif bir karartma ekleyerek kartın okunabilirliğini artırıyoruz */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('./images/finance.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    /* Sayfa kaysa bile arka plan sabit kalır */
+
+    /* İçindeki her şeyi tam ortaya hizalamak için body'i flex yapabiliriz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

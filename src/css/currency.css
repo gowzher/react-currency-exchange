@@ -1,44 +1,90 @@
-.currency-div {
+/* Ana kapsayıcıyı ekranın ortasına alalım */
+.main-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
-    margin-top: 50px;
+    /* background-color ve height sildik çünkü body'den geliyor */
+}
+
+.currency-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     width: 450px;
-    height: 200px;
-    border: 1px solid black
+    text-align: center;
 }
 
-.amount {
+.app-title {
+    color: #333;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #efefef;
+    padding-bottom: 10px;
+}
+
+/* Giriş alanlarının bulunduğu satır */
+.exchange-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+/* Input ve Select stilleri */
+.input-field,
+.select-field {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-field:focus,
+.select-field:focus {
+    border-color: #007bff;
+}
+
+.amount-input {
     width: 80px;
-    height: 25px;
-    margin-right: 10px;
 }
 
-.result {
+.result-input {
+    width: 100px;
+    background-color: #f9f9f9;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.currency-select {
     width: 80px;
-    height: 25px;
-}
-
-.from-currency-option {
-    width: 70px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-.to-currency-option {
-    width: 70px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-.exchange-button {
-    width: 80px;
-    height: 30px;
-    margin-top: 20px;
     cursor: pointer;
-    background-color: red;
-    border: none;
-    border-radius: 5px;
+}
+
+/* Çevirme Butonu */
+.exchange-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
     color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.exchange-button:hover {
+    background-color: #0056b3;
+}
+
+.exchange-button:active {
+    transform: scale(0.98);
+}
+
+.arrow-icon {
+    color: #007bff;
+    font-size: 24px;
 }
