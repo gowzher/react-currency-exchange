@@ -14,11 +14,22 @@ function Currency() {
     const [toCurrency, setToCurrency] = useState("TRY");
     const [result, setResult] = useState(0);
     const [currencies, setCurrencies] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
 
     const exchange = async () => {
-        const response = await axios.get(`${BASE_URL}?apikey=${API_KEY}&base_currency=${fromCurrency}`)
-        const result = ((response.data.data[toCurrency]) * amount);
-        setResult(result.toFixed(2));
+        setError(""); // Yeni işlem başladığında eski hatayı sil
+        setLoading(true); // 1. İstek başladığında yükleniyor modunu aç
+        try {
+            const response = await axios.get(`${BASE_URL}?apikey=${API_KEY}&base_currency=${fromCurrency}`);
+            const resultValue = (response.data.data[toCurrency] * amount).toFixed(2);
+            setResult(resultValue);
+        } catch (err) {
+            // Hata mesajını state'e aktar
+            setError("Kur bilgileri alınamadı. Lütfen internetinizi veya API anahtarınızı kontrol edin.");
+        } finally {
+            setLoading(false); // 2. İşlem bittiğinde (hata olsa bile) yükleniyor modunu kapat
+        }
     }
 
     useEffect(() => {
@@ -82,8 +93,21 @@ function Currency() {
                     />
                 </div>
 
-                <button onClick={exchange} className="exchange-button">
-                    Hesapla
+                {error && (
+                    <div className="error-message">
+                        <span>{error}</span>
+                        <button className="close-error-btn" onClick={() => setError("")}>
+                            &times; {/* Bu özel karakter "X" işaretini daha şık gösterir */}
+                        </button>
+                    </div>
+                )}
+
+                <button
+                    onClick={exchange}
+                    className="exchange-button"
+                    disabled={loading} // Yüklenirken tıklamayı devre dışı bırakır
+                >
+                    {loading ? "Hesaplanıyor..." : "Hesapla"}
                 </button>
             </div>
         </div>
